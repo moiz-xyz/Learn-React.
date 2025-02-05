@@ -1,14 +1,21 @@
-import React,{useState} from "react"
-function App(){
+// import React,{useState} from "react"
+function App (){
+  let inp = document.getElementById("inp") ;
+  const showValue = () => {
+    alert (` The value is stored click the button to see or hide it ${inp.value}`);
 
-  const [visible , show] = useState(false);
-  const [unVisible , hide] = useState(true);
+    inp.value = "";
+  }
+  const hidevalue = () =>{
+    
+    
+  }
+  return <>
 
-  return  <>
- 
- <input type="text" name="" id=""  placeholder="Enter any thing"/>
- {/* <button onClick={ () =>(){}}> Show text</button> */}
+<input type="text"  id="inp"placeholder="Write any secret"/> <button onClick={submit}>Submit</button> <br />
+<button onClick={showValue}>Show secret</button>  <br />
+<button onClick={hidevalue}>Hide secret</button> 
+
   </>
-}
-
+} 
 export default App
