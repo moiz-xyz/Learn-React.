@@ -2,11 +2,19 @@ import { useState } from "react"
 function App (){
   
   let [couter , setcounter] = useState (0)
-  const add = ()=>
-    setcounter(couter +1)
+  const add = () => {
+    if (couter <20 ){
+      setcounter(couter +1)
+    }  else {
+alert("Value cannot exceed 20")
+    }
+  }
   const remove =  ()=> {
-    setcounter(couter -1)
-
+if( couter < 1){
+alert("Value cannot be less than 0")
+} else{
+  setcounter (couter - 1)
+}
     }
   return <>
   <div>
